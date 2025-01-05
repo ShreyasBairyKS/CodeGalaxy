@@ -11,9 +11,9 @@ dotenv.config();
 const app = express();
 
 // Middleware
-app.use(cors());
-app.use(express.json());
-app.use('/api', apiLimiter);
+app.use(cors()); // Enable CORS for all routes
+app.use(express.json()); // Parse JSON bodies
+app.use('/api', apiLimiter); // Apply rate limiting to API routes
 
 // Routes
 import authRoutes from './routes/authRoutes.js';

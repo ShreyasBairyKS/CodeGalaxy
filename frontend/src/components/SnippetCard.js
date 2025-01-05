@@ -1,9 +1,10 @@
 // src/components/SnippetCard.js
 import { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom'; // Fix navigate import
-import './styles.css';
+import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { upvoteSnippet, downvoteSnippet } from '../features/snippetSlice';
+import { fetchSnippets } from '../services/apiService'; // Import the service
+import './styles.css';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { FaArrowUp, FaArrowDown, FaComment, FaCopy, FaCheck } from 'react-icons/fa';
@@ -11,16 +12,24 @@ import { FaArrowUp, FaArrowDown, FaComment, FaCopy, FaCheck } from 'react-icons/
 const SnippetCard = ({ snippet }) => {
   const [copied, setCopied] = useState(false);
   const dispatch = useDispatch();
-  const navigate = useNavigate(); // Fix navigate hook
+  const navigate = useNavigate();
   const { user } = useSelector(state => state.auth);
 
-  const handleUpvote = () => {
+  const handleUpvote = async () => {
     if (!user) {
       navigate('/login');
       return;
     }
     dispatch(upvoteSnippet(snippet._id));
+    // Optionally refresh snippets
+    try {
+      const snippets = await fetchSnippets();
+      console.log(snippets); // Handle your snippets after upvote
+    } catch (error) {
+      console.error('Error fetching snippets:', error.message);
+    }
   };
+
   const handleDownvote = () => {
     if (!user) {
       navigate('/login');
