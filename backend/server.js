@@ -10,8 +10,14 @@ dotenv.config();
 
 const app = express();
 
+// CORS configuration
+app.use(cors({
+  origin: process.env.NODE_ENV === 'production' 
+    ? 'https://your-netlify-site.netlify.app' // Replace with your actual Netlify URL
+    : 'http://localhost:3000' // Local development URL
+}));
+
 // Middleware
-app.use(cors()); // Enable CORS for all routes
 app.use(express.json()); // Parse JSON bodies
 app.use('/api', apiLimiter); // Apply rate limiting to API routes
 
