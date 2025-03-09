@@ -26,56 +26,8 @@ Express.js
 MongoDB with Mongoose
 JWT for authentication
 Bcrypt.js for password hashing
-Installation
-Prerequisites
-Node.js and npm installed
-MongoDB database (local or hosted)
-Git (optional)
-Steps
-Clone the repository
 
-git clone https://github.com/yourusername/CodeGalaxy.git
-Backend Setup
 
-cd CodeGalaxy/backend
-npm install
-Environment Variables
-
-Create a .env file in the backend directory and add the following:
-
-PORT=5000
-MONGODB_URI=your_mongodb_connection_string
-JWT_SECRET=your_jwt_secret_key
-Default Snippets
-
-npm run seed
-Frontend Setup
-
-cd ../frontend
-npm install
-Environment Variables
-
-Create a .env file in the frontend directory and add:
-
-REACT_APP_API_URL=http://localhost:5000/api
-Start the Frontend and Backend
-
-cd ..
-npm run dev
-Access the Application
-
-Open your browser and navigate to http://localhost:3000
-
-Contributing
-Contributions are welcome! Please follow these steps:
-
-Fork the repository.
-Create a new branch: git checkout -b feature/YourFeature
-Commit your changes: git commit -m 'Add some feature'
-Push to the branch: git push origin feature/YourFeature
-Open a pull request.
-License
-This project is licensed under the GNU GENERAL PUBLIC LICENSE.
 
 Contact
 G Shreekar: GitHub
