@@ -1,0 +1,124 @@
+/* src/pages/CommentPage.css */
+.comment-page {
+  min-height: 100vh;
+  background-color: var(--dark-bg);
+  padding: 20px 0;
+}
+
+.snippet-card {
+  background: rgba(26, 26, 26, 0.9);
+  border: 1px solid var(--neon-primary);
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 0 20px var(--neon-primary);
+}
+
+.code-block {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 1rem;
+  border-radius: 4px;
+  margin-top: 1rem;
+  overflow-x: auto;
+}
+
+.comments-section {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.comments-title {
+  border-bottom: 1px solid var(--neon-primary);
+  padding-bottom: 0.5rem;
+}
+
+.comment-form textarea {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--neon-primary);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.comment-form textarea:focus {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: var(--neon-secondary);
+  box-shadow: 0 0 10px var(--neon-secondary);
+}
+
+.btn-comment {
+  background: transparent;
+  border: 1px solid var(--neon-secondary);
+  color: var(--neon-secondary);
+  transition: all 0.3s ease;
+}
+
+.btn-comment:hover {
+  background: var(--neon-secondary);
+  color: var(--dark-bg);
+  box-shadow: 0 0 15px var(--neon-secondary);
+}
+
+.comment-card {
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.comment-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.comment-header {
+  margin-bottom: 0.5rem;
+}
+
+.comment-author {
+  color: var(--neon-primary);
+  font-weight: bold;
+}
+
+.comment-body {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.login-prompt {
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  border: 1px solid var(--neon-primary);
+}
+
+.neon-link {
+  color: var(--neon-primary);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.neon-link:hover {
+  text-shadow: 0 0 8px var(--neon-primary);
+  color: var(--neon-primary);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .snippet-card,
+  .comments-section {
+    margin: 10px;
+  }
+}
