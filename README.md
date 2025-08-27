@@ -17,7 +17,7 @@ CodeGalaxy is a web application for sharing and discovering code snippets across
 
 ## Technologies Used
 
-### Frontend
+### Frontend 
 
 - **React**
 - **Redux Toolkit**
