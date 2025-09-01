@@ -14,7 +14,7 @@ CodeGalaxy is a web application for sharing and discovering code snippets across
 - **Community Snippets**: Explore snippets shared by other users.
 - **User Profiles**: View all snippets created by a specific user.
 - **Responsive Design**: Fully responsive UI with a modern neon theme.
-
+ 
 ## Technologies Used
 
 ### Frontend 
