@@ -10,7 +10,7 @@ CodeGalaxy is a web application for sharing and discovering code snippets across
 - **Comment System**: Engage with other users by commenting on their snippets.
 - **Voting System**: Upvote or downvote snippets to promote valuable content.  
 - **Search and Filter**: Search for snippets by title, description, or language.
-- **Categories**: Browse snippets organized by programming language categories.  
+- **Categories**: Browse snippets organized by programming language categories. 
 - **Community Snippets**: Explore snippets shared by other users.
 - **User Profiles**: View all snippets created by a specific user.
 - **Responsive Design**: Fully responsive UI with a modern neon theme.
