@@ -4,7 +4,7 @@ CodeGalaxy is a web application for sharing and discovering code snippets across
 
 ## Features
 
-- **User Authentication**: Register and log in to create and manage your own snippets.   
+- **User Authentication**: Register and log in to create and manage your own snippets. 
 - **Create Snippets**: Add new code snippets with titles, descriptions, and language selection.
 - **Syntax Highlighting**: Preview code snippets with language-specific syntax highlighting.  
 - **Comment System**: Engage with other users by commenting on their snippets.
